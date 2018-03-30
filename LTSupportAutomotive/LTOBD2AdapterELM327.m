@@ -262,7 +262,7 @@
 
     LTOBD2CommandELM327_TRY_PROTOCOL* tryProtocol = [LTOBD2CommandELM327_TRY_PROTOCOL commandForProtocol:protocol];
     LTOBD2Command* test0100 = [LTOBD2Command commandWithRawString:@"0100"];
-    [self transmitMultipleCommands:@[ tryProtocol, test0100 ] responseHandler:^(LTOBD2Command * _Nonnull command) {
+    [self transmitMultipleCommandsResponse:@[ tryProtocol, test0100 ] responseHandler:^(LTOBD2Command * _Nonnull command) {
 
         if ( command == test0100 )
         {

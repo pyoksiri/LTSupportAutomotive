@@ -328,7 +328,7 @@
         [commands addObject:command];
     }
     
-    [adapter transmitMultipleCommands:commands responseHandler:^(LTOBD2Command * _Nonnull command) {
+    [adapter transmitMultipleCommandsResponse:commands responseHandler:^(LTOBD2Command * _Nonnull command) {
         
         if ( command != commands.lastObject )
         {

@@ -76,7 +76,7 @@ extern NSString* const LTOBD2AdapterDidReceive;
 -(void)transmitRawString:(NSString*)command responseHandler:(nullable LTOBD2RawResponseHandler)handler;
 -(void)transmitCommand:(LTOBD2Command*)command responseHandler:(nullable LTOBD2CommandResponseHandler)handler;
 // response handler getting called for every response
--(void)transmitMultipleCommands:(NSArray<LTOBD2Command*>*)commands responseHandler:(nullable LTOBD2CommandResponseHandler)handler;
+-(void)transmitMultipleCommandsResponse:(NSArray<LTOBD2Command*>*)commands responseHandler:(nullable LTOBD2CommandResponseHandler)handler;
 // completion handler getting called for the last response
 -(void)transmitMultipleCommands:(NSArray<LTOBD2Command*>*)commands completionHandler:(nullable LTOBD2MultipleCommandsResponseHandler)handler;
 -(void)cancelPendingCommands;

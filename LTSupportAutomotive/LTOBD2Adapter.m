@@ -238,7 +238,7 @@ NSString* const LTOBD2AdapterDidReceive = @"LTOBD2AdapterDidReceive";
     });
 }
 
--(void)transmitMultipleCommands:(NSArray<LTOBD2Command*>*)commands responseHandler:(nullable LTOBD2CommandResponseHandler)handler
+-(void)transmitMultipleCommandsResponse:(NSArray<LTOBD2Command*>*)commands responseHandler:(nullable LTOBD2CommandResponseHandler)handler
 {
     if ( !commands.count )
     {
