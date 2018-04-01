@@ -102,11 +102,9 @@
         NSUInteger payloadIndex = headerLength + numberOfBytesInCommand + multiFrameCorrective;
         NSUInteger payloadLength = bytesInLine.count - payloadIndex - 1; // last byte is checksum
         NSRange payloadRange = NSMakeRange(payloadIndex, payloadLength);
-        if (payloadIndex + payloadLength <= bytesInLine.count) {
-            NSArray<NSNumber*>* payload = [bytesInLine subarrayWithRange:payloadRange];
-            if (payload != nil) {
-                [resultForSource appendPayloadBytes:payload];
-            }
+        NSArray<NSNumber*>* payload = [bytesInLine subarrayWithRange:payloadRange];
+        if (payload != nil) {
+            [resultForSource appendPayloadBytes:payload];
         }
     }
     
